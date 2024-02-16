@@ -4,7 +4,7 @@ import {menu} from "./SidebarConfig";
 import {useNavigate} from "react-router-dom";
 
 export const Sidebar = () => {
-    const [activeTab, setActiveTab] = useState()
+    const [activeTab, setActiveTab] = useState([])
     const navigate = useNavigate()
     const HandleTabClick = (title) => {
         setActiveTab(title)

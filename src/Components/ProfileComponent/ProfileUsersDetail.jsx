@@ -19,16 +19,15 @@ export const ProfileUsersDetail = () => {
                     <div className='flex space-x-10'>
                         <div>
                             <span className='font-semibold mr-1'>10</span>
-                            <span>bài viết</span>
+                            <span>post</span>
                         </div>
                         <div>
                             <span className='font-semibold mr-1'>5</span>
-                            <span>người theo dõi</span>
+                            <span>folloer</span>
                         </div>
                         <div>
-                            <span className='mr-1'>Đang theo dõi</span>
                             <span className='font-semibold mr-1'>7</span>
-                            <span>người dùng</span>
+                            <span>following</span>
                         </div>
                     </div>
 
