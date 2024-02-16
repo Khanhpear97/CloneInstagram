@@ -4,11 +4,14 @@ import "./HomePost.css"
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import {FaRegComment} from "react-icons/fa";
 import {RiSendPlaneLine} from "react-icons/ri";
+import {CommentModal} from "../CommentComponent/CommentModal";
+import {useDisclosure} from "@chakra-ui/react";
 
 export const HomePost = () => {
     const [dropDown, setDropDown] = useState(false)
     const [isPostLiked, setIsPostLiked] = useState(false)
     const [isSaved, setIsSaved] = useState(false)
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     const handleClick = () => {
         setDropDown(!dropDown);
@@ -20,6 +23,10 @@ export const HomePost = () => {
 
     const handleSavePost = () => {
         setIsSaved(!isSaved);
+    }
+
+    const handleOpenCommentModal = () => {
+        onOpen();
     }
 
     return (
@@ -50,7 +57,7 @@ export const HomePost = () => {
                     <div className='flex items-center space-x-2'>
                         {isPostLiked ? <AiFillHeart className='text-2xl hover:opacity-50 cursor-pointer text-red-600' onClick={handlePostLiked}/>
                             : <AiOutlineHeart className='text-2xl hover:opacity-50 cursor-pointer' onClick={handlePostLiked}/>}
-                        <FaRegComment className='text-xl hover:opacity-50 cursor-pointer'/>
+                        <FaRegComment onClick={handleOpenCommentModal} className='text-xl hover:opacity-50 cursor-pointer'/>
                         <RiSendPlaneLine className='text-xl hover:opacity-50 cursor-pointer'/>
                     </div>
                     <div className='cursor-pointer'>
@@ -71,6 +78,10 @@ export const HomePost = () => {
                     </div>
                 </div>
             </div>
+
+            <CommentModal handlePostLiked={handlePostLiked} isOpen={isOpen}
+                          onClose={onClose} handleSavePost={handleSavePost}
+                          isPostLiked={isPostLiked} isSaved={isSaved}/>
         </div>
     )
 }
