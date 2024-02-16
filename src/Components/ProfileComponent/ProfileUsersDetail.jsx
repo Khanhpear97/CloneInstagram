@@ -4,12 +4,12 @@ import {TbCircleDashed} from "react-icons/tb";
 export const ProfileUsersDetail = () => {
     return (
         <div className='py-10 w-full'>
-            <div className='flex items-center'>
+            <div className='flex px-20 items-center'>
                 <div className='w-[15%]'>
                     <img className='w-32 h-32 rounded-full' src="https://cdn.pixabay.com/photo/2021/07/13/11/34/cat-6463284_1280.jpg" alt=""/>
                 </div>
 
-                <div className='space-y-5'>
+                <div className='space-y-5 px-20'>
                     <div className='flex space-x-10 items-center'>
                         <p>username</p>
                         <button>Edit Profile</button>
@@ -23,7 +23,7 @@ export const ProfileUsersDetail = () => {
                         </div>
                         <div>
                             <span className='font-semibold mr-1'>5</span>
-                            <span>folloer</span>
+                            <span>follower</span>
                         </div>
                         <div>
                             <span className='font-semibold mr-1'>7</span>
