@@ -1,5 +1,5 @@
 import React from "react";
-import {Sugesstion} from "./Sugesstion";
+import {Suggestion} from "./Suggestion";
 
 export const HomeRight = () => {
     return (
@@ -21,7 +21,7 @@ export const HomeRight = () => {
                 </div>
             </div>
             <div className='space-y-5 mt-10'>
-                {[1, 1, 1, 1].map((item) => <Sugesstion/>)}
+                {[1, 1, 1, 1].map((item) => <Suggestion/>)}
             </div>
         </div>
     )
