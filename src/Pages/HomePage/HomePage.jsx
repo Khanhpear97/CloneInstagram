@@ -17,7 +17,7 @@ export const HomePage = () => {
                         {[1,1,1,1].map((item) => <HomePost/>)}
                     </div>
                 </div>
-                <div className='w-[35%]'>
+                <div className='w-[27%]'>
                     <HomeRight/>
                 </div>
             </div>
