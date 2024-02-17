@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import { IoReorderThree } from "react-icons/io5";
 import {menu} from "./SidebarConfig";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export const Sidebar = () => {
-    const [activeTab, setActiveTab] = useState()
+    const [activeTab, setActiveTab] = useState([])
     const navigate = useNavigate()
     const HandleTabClick = (title) => {
         setActiveTab(title)
@@ -20,7 +20,9 @@ export const Sidebar = () => {
             <div className='flex flex-col justify-between h-full px-10'>
                 <div>
                     <div className='pt-10'>
-                        <img className='w-40' src="https://clipart.info/images/ccovers/1522452762Instagram-logo-png-text.png" alt=""/>
+                        <Link to='/'>
+                            <img className='w-40' src="https://clipart.info/images/ccovers/1522452762Instagram-logo-png-text.png" alt=""/>
+                        </Link>
                     </div>
                     <div className='mt-10'>
                         {menu.map((item) =>
