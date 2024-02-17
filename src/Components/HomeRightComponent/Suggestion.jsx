@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Sugesstion = () => {
+export const Suggestion = () => {
     return (
         <div className='flex justify-between'>
             <div className='flex items-center'>
